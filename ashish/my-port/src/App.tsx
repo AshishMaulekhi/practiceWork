@@ -6,6 +6,7 @@ import MainLayouts from "./MainLayout/MainLayouts";
 import Abouts from "./About/Abouts";
 import Contacts from "./Contact/Contacts";
 import RootLayouts from "./MainLayout/RootLayouts";
+import MainProject from "./Projects/MainProject";
 
 function App() {
   const theme=createTheme({
@@ -34,6 +35,10 @@ const router =createBrowserRouter([
       },{
         path:"contact",
         element:<Contacts/>
+      }
+      ,{
+        path:"project",
+        element:<MainProject/>
       }
     ]
   },{
