@@ -1,32 +1,49 @@
 import { IconHexagonLetterC } from "@tabler/icons-react"
 import SideBar from "./SideBar";
-import { Link} from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useMediaQuery } from "@mantine/hooks";
+import { em } from "@mantine/core";
 
+const links=["About","Project","Experience","Contact","Resume"];
+const navlinks=(col:boolean,clicked:any)=>{
+  const handleClick=()=>{
+    if(clicked)clicked();
+  }
+  
+  return links.map((link, idx)=>(
+    <a key={idx} onClick={handleClick} className={`${col?'flex flex-col items-center':''} text-navyS-100 text-lg font-mono hover:text-mintS-500`} href={`#${link}`}><span className="text-mintS-500">0{idx+1}. </span>{link}</a>
+   
 
-const links=["About","Work","Experience","Contact","Resume"];
-const navlinks=(col:boolean)=>(
-   links.map((link, idx)=>(
-     <Link to={`/${link}`} key={idx}>
-        <div className=  {`${col?'flex flex-col items-center ':''}  text-light-300 hover:text-mintS-500`}><span className="text-mintS-500">0.{idx+1} </span>{link}</div>
-    </Link>)
+     )
   )
-)
+}
 
 
 const Header = () => {
+  const isMobile = useMediaQuery(`(max-width: ${em(476)})`);
+    const [show, setShow] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+    const [shadow, setShadow] = useState(false);
+    const controlNavbar = () => {
+        if(window.scrollY>lastScrollY && window.scrollY>70)setShow(false);
+        else setShow(true);
+        if(window.scrollY>70)setShadow(true);
+        else setShadow(false);
+        setLastScrollY(window.scrollY);
+    }
+  useEffect(()=>{
+    window.addEventListener('scroll',controlNavbar);
+    return ()=>window.removeEventListener('scroll',controlNavbar);
+  })
   return (
-    <nav className="flex   justify-between bg-navyS-800 h-[15vh] items-center w-full  ">
-      <div className="text-btcolor-500 !z-10 md:ml-5">
-        <Link to='/'>
-          <IconHexagonLetterC   size={48} color='#69FFD6' stroke={1.5}/>
-        </Link>
-      </div>
-      <div className="  justify-evenly gap-16 mr-5  md:flex hidden">
-         {navlinks(false)}
-      </div>
-      
-      <SideBar/>
-    </nav>
+    <nav className={`flex ${show?"translate-y-0":"-translate-y-28"} ${shadow?"shadow-[0px_10px_30px_-10px_#020c1b]":""} transition-transform duration-500 ease-in-out fixed w-full z-10 bg-bgColor h-28  px-10  justify-between items-center xs-mx:px-4 xs-mx:h-20 `}>
+        
+    <IconHexagonLetterC className="z-10" size={isMobile?45:60} color="#64FFDA" stroke={1.25}/>
+    <div className="bs:flex gap-8 hidden">
+        {navlinks(false, null)}
+    </div>
+    <SideBar/>
+</nav>
   )
 }
 

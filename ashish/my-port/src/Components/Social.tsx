@@ -24,13 +24,13 @@ const Social = () => {
    const socialIcons=()=>(
       
       socialLinks.map((link,idx)=>(
-         <a key={idx} href={`${link.link}`} target="_blank " className='text-navyS-200 text-lg hover:text-mintS-500 hover:translate-x-1 -rotate-90 transition easy-in-out duration-300 '>
+         <a key={idx} href={`${link.link}`} data-aos="fade-down-left" data-aos-duration='800' target="_blank " className='text-navyS-200 text-lg hover:text-mintS-500 hover:translate-x-1 -rotate-90 transition easy-in-out duration-300 '>
             {<link.icon stroke={2.0}/>}
          </a>
       ))
    )
    return (
-      <div className=' ml-10 flex items-center gap-5 fixed bottom-32 -left-44 rotate-90 '>
+      <div  className=' ml-10 flex md-mx:hidden items-center gap-5 fixed bottom-32 -left-44 rotate-90 '>
          {socialIcons()}
         <hr  className='w-[200px] rounded-full'/>
       </div>

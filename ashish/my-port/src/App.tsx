@@ -1,15 +1,34 @@
 import { createTheme, MantineProvider  } from "@mantine/core";
-import {createBrowserRouter,RouterProvider} from "react-router-dom"
 import './index.css'; 
 import '@mantine/core/styles.css';
-import MainLayouts from "./MainLayout/MainLayouts";
-import Abouts from "./About/Abouts";
-import Contacts from "./Contact/Contacts";
 import RootLayouts from "./MainLayout/RootLayouts";
-import MainProject from "./Projects/MainProject";
+
+import { pdfjs } from 'react-pdf';
+import AOS from 'aos'
+import 'aos/dist/aos.css';
+
+import { useEffect } from "react";
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.mjs',
+  import.meta.url,
+).toString();
 
 function App() {
+  useEffect(()=>{
+    AOS.init();
+    
+  },[])
+
   const theme=createTheme({
+    breakpoints:{
+      'xs':'320px',
+      'sm':'476px',
+      'md':'640px',
+      'lg':'900px',
+      'xl':'1024px',
+      '2xl':'1280px',
+    },
     colors : {
      navyS : ['#E3E8F0', '#C6D1E1', '#A9BAD2', '#8DA3C3', '#708CB4', '#5475A5', '#375E96', '#1B4787', '#0A192F', '#060F1F'],
       mintS : ['#E0FFF8', '#C2FFEF', '#A4FFE7', '#87FFDE', '#69FFD6', '#4CFFCD', '#2EFFC5', '#11FFBC', '#00E6A8', '#00CC96', '#009F77'],
@@ -20,34 +39,9 @@ function App() {
     fontFamily:'poppins,sans-serif',
 })
 
-const router =createBrowserRouter([
-  {
-    path:"/",
-    element:<MainLayouts/>,
-    children:[
-      {
-        index:true,element:<RootLayouts/>//act as home page
-      },
-      
-      {
-        path:"about",
-        element:<Abouts/>
-      },{
-        path:"contact",
-        element:<Contacts/>
-      }
-      ,{
-        path:"project",
-        element:<MainProject/>
-      }
-    ]
-  },{
-
-  }
-])
   return (
     <MantineProvider theme={theme} >
-        <RouterProvider router={router}/>
+        <RootLayouts/>
     </MantineProvider>
     
       

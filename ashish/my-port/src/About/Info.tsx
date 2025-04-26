@@ -1,4 +1,4 @@
-
+import { IconBrandGithub, IconBrandInstagram, IconBrandLeetcode, IconBrandLinkedin, } from "@tabler/icons-react";
 const Info = {
    "name":"Ashish Maulekhi",
    "about":"I'm a passionate software Developer specialized in crafting efficent and scalable solutions, deliver top-notch web application and provide freelancce service that exceed client expections. Let's connect and create something amazing together!",
@@ -64,6 +64,52 @@ const ExperienceInfo = [
        desc: "I led Frontend development with  React and TypeScript, creating responsive UI and interfaces. Collaborating in agile teams, I fostered innovation and efficiency for top-quality solutions.",
        skills: [ "React JS", "TypeScript", "Mantine UI","shadcn" ]
    }
-]
 
-export  {Info,ProjectInfo,SkillInfo,ExperienceInfo}
+]
+const socialLinks = [
+   { link: "https://github.com/ashishmaulekhi", icon: IconBrandGithub },
+   { link: "https://www.linkedin.com/ashishmaulekhi", icon: IconBrandLinkedin },
+   { link: "https://www.instagram.com/itz_ashuo12", icon: IconBrandInstagram }, 
+   { link: "https://www.leetcode.com/dex", icon: IconBrandLeetcode }
+];
+
+const slugs = [
+   "typescript",
+   "spring",
+   "javascript",
+   "dart",
+   "java",
+   "react",
+   "angular",
+   "flutter",
+   "android",
+   "html5",
+   "css3",
+   "springboot",
+   "mongodb",
+   "selenium",
+   "nodedotjs",
+   "express",
+   "nextdotjs",
+   "prisma",
+   "mysql",
+   "amazonaws",
+   "postgresql",
+   "firebase",
+   "nginx",
+   "vercel",
+   "testinglibrary",
+   "jest",
+   "cypress",
+   "docker",
+   "git",
+   "jira",
+   "github",
+   "gitlab",
+   "visualstudiocode",
+   "androidstudio",
+   "sonarqube",
+   "figma",
+];
+
+export  {Info,ProjectInfo,SkillInfo,ExperienceInfo,slugs,socialLinks}
