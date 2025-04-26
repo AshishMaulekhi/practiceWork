@@ -18,7 +18,7 @@ const ProjectInfo=[
    {
       title:"Airbnbs Hotel Management System",
       desc:"An Airbnb-style hotel management system helps guests book rooms online easily. It lets hosts list properties, set prices, and manage availability. Guests can search, compare, and reserve rooms based on location and needs. The system includes features like payments, reviews, and booking history. It makes hotel and property management simple, digital, and user-friendly",
-      image:"hotel_m.jpg",
+      image:"hotel_m.JPG",
       live:false,
       technologies:["TypeScript","TailwindCSS","Redux","MantineUI","SpringBoot","MongDb"],
       link:"https://github.com/AshishMaulekhi/",
