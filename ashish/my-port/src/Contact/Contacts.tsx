@@ -55,7 +55,7 @@ const handleSubmit=async()=>{
         <FlottingInput  id='name' name='Name' value={formdata.name} handleChange={handleChange} error={formError.name} />
         <FlottingInput  id='email' name='Email' value={formdata.email} handleChange={handleChange}  error={formError.email}/>
         <FlottingInput  id='phone' name='Phone Numnber' value={formdata.phone} handleChange={handleChange}  error={formError.phone}/>
-        <FlottingInput  id='Message' name='Message' value={formdata.phone} handleChange={handleChange}  error={formError.message}/>
+        <FlottingInput  id='message' name='Message' value={formdata.message} handleChange={handleChange}  error={formError.message}/>
         <Button onClick={handleSubmit} variant='filled' size='md' fullWidth radius='lg' color='#64FFDA' className='!text-navyS-700 !font-bold !text-xl' rightSection={<IconArrowRight/>} > Send</Button>
       </div>
     </div>

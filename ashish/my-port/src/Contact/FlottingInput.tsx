@@ -1,4 +1,3 @@
-import { Textarea } from "@mantine/core";
 
 const FlottingInput = (props: any) => {
    return (
@@ -14,7 +13,7 @@ const FlottingInput = (props: any) => {
          focus:ring-0 focus:border-mintS-500 peer  ${props.error?'border-red-500':''} "  `}
          placeholder=" "
        />:
-       <textarea name={props.id} id={props.id} rows={4}
+       <textarea name={props.id} id={props.id} rows={4} onChange={(e) => props.handleChange(props.id, e.target.value)} 
             className={`"block px-2.5 pb-2.5 hover:shadow-[0_0_8px_0_#64FFDA50] pt-4 w-full text-sm text-navyS-200
          bg-navyS-800 rounded-lg border border-mintS-500 ${props.error?'border-red-500':''} appearance-none focus:outline-none
          focus:ring-0 focus:border-mintS-500 peer"`}
