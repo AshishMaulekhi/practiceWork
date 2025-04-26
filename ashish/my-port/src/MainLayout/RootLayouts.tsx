@@ -9,6 +9,7 @@ import Contacts from '../Contact/Contacts'
 import LoaderIcons from '../Loader/LoaderIcons'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import { Toaster } from 'react-hot-toast'
 
 const RootLayouts = () => {
   const[loading,setloading]=useState(true);
@@ -22,6 +23,7 @@ const RootLayouts = () => {
     <div className="min-h-[100vh] bg-navyS-800 font-['Poppins']" >
       {
         loading!==true?<>
+      <Toaster/>
       <Header/>
       <Abouts/>
       <MainProject/>

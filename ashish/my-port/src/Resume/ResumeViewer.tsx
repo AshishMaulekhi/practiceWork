@@ -17,7 +17,7 @@ const ResumeViewer = (props:any) => {
                 <Modal.Title className='!text-3xl xs-mx:!text-2xl items-center !text-navyS-100 !font-bold'>
                   Resume   
                   <Tooltip label="download resume" position='right' offset={5}>
-                     <ActionIcon component='a' href='./Resumefile.pdf' size={btn}  download={`${Info.name}_resume`} variant="outline " >
+                     <ActionIcon component='a' href='Resumefile.pdf' size={btn}  download={`${Info.name}_resume`} variant="outline " >
                               <IconArrowBigDownLineFilled color='#64FFDA' className='!bg-navyS-800  xs-mx:!w-[16px] !border-none !border-navyS-800'/>
                      </ActionIcon>
                   </Tooltip>
@@ -25,7 +25,7 @@ const ResumeViewer = (props:any) => {
                 <Modal.CloseButton size='md' iconSize='30px' className=' !bg-navyS-800 !text-red-500 !cursor-pointer' />
               </Modal.Header>
               <Modal.Body pt='md' className=' !bg-navyS-800  !border-navyS-800   !roudned-bl-3xl  !bg-bgColor xs-mx:!p-2 !pt-2 !border-primaryColor  !border-2 xs-mx:!border xs-mx:!border-t-0 !border-t-0 !rounded-bl-3xl !rounded-br-3xl  ' >                  
-              <Document className="w-full !rounded-2xl !overflow-hidden !min-w-40 !min-h-14" file="./Resumefile.pdf" >
+              <Document className="w-full !rounded-2xl !overflow-hidden !min-w-40 !min-h-14" file="Resumefile.pdf" >
                 <Page pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false} className="w-full !min-w-40 !min-h-14 md-mx:[&>.react-pdf\_\_Page\_\_canvas]:!w-full md-mx:[&>.react-pdf\_\_Page\_\_canvas]:!h-auto"   />
               </Document>
               </Modal.Body>

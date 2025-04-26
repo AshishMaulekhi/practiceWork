@@ -74,7 +74,7 @@ const Abouts = () => {
 
             <Button
               component="a"
-              href="./Resumefile.pdf"
+              href="Resumefile.pdf"
               download={`${Info.name}_resume`}
               rightSection={<IconDownload size={20} />}
               variant="outline"
@@ -91,7 +91,7 @@ const Abouts = () => {
         <div className="z-10 h-fit w-fit flex justify-center items-center rounded-full bs:mr-10">
           <NeonGradientCard className="w-[325px] h-[325px] max-w-sm lg-mx:w-64 lg-mx:h-64 xsm-mx:w-56 xsm-mx:h-56 items-center justify-center text-center">
             <img
-              src="./linkedin_profile.jpeg"
+              src="linkedin_profile.jpeg"
               className="rounded-full w-full h-full"
               alt="profile"
             />

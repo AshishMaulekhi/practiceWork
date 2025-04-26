@@ -1,6 +1,8 @@
 {
   "name": "my-port",
   "version": "0.1.0",
+  "homepage": "https://ashishmaulekhi.github.io/practiceWork"
+,
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -17,9 +19,11 @@
     "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
     "aos": "^2.3.4",
+    "firebase": "^11.6.1",
     "next-themes": "^0.4.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-hot-toast": "^2.5.2",
     "react-icon-cloud": "^4.1.7",
     "react-pdf": "^9.2.1",
     "react-router-dom": "^7.5.1",
@@ -33,7 +37,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +61,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^3.4.17"
   }
 }

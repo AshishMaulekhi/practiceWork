@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { SkillInfo } from '../About/Info'
 import SkillCard from './SkillCard'
 
