@@ -18,7 +18,7 @@ const ProjectInfo=[
    {
       title:"Airbnbs Hotel Management System",
       desc:"An Airbnb-style hotel management system helps guests book rooms online easily. It lets hosts list properties, set prices, and manage availability. Guests can search, compare, and reserve rooms based on location and needs. The system includes features like payments, reviews, and booking history. It makes hotel and property management simple, digital, and user-friendly",
-      image:"jobPortal.png",
+      image:"hotel_m.jpg",
       live:false,
       technologies:["TypeScript","TailwindCSS","Redux","MantineUI","SpringBoot","MongDb"],
       link:"https://github.com/AshishMaulekhi/",
@@ -27,7 +27,7 @@ const ProjectInfo=[
    {
       title:"linkedIn MicroService System",
       desc:" A LinkedIn Microservice System breaks the platform into small, independent services. Each service handles a specific feature like profiles, messaging, jobs, or connections. They communicate using APIs to keep the system scalable and maintainable. This architecture improves performance, fault isolation, and development speed. It makes managing a large social network platform efficient and flexible.",
-      image:"jobPortal.png",
+      image:"Microservices.jpg",
       live:true,
       technologies:["TypeScript","TailwindCSS","Redux","MantineUI","SpringBoot","MongDb"],
       link:"https://github.com/AshishMaulekhi/",

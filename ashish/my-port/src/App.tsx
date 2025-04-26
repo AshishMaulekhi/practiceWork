@@ -13,7 +13,7 @@ import { useEffect } from "react";
 //   'pdfjs-dist/build/pdf.worker.min.mjs',
 //   import.meta.url,
 // ).toString();
-pdfjs.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
 
 
 function App() {
