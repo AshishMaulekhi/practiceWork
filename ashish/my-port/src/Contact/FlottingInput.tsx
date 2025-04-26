@@ -30,7 +30,7 @@ const FlottingInput = (props: any) => {
        >
          {props.name}
        </label>
-       {`${props.error &&<div className="text-red-500 sm-mx:text-sm xs-mx:text-xs  ml-1 mt-1"  > {props.error}</div>}`}
+       {props.error &&<div className="text-red-500 sm-mx:text-sm xs-mx:text-xs  ml-1 mt-1"  > {props.error}</div>}
      </div>
    );
  };
